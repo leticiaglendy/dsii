@@ -1,6 +1,6 @@
-create database etecSQL;
-use etecSQL;
-create table aluno (
+create database etecBD;
+use etecBD;
+create table cadastro (
 	id int auto_increment primary key,
     nome varchar(30) not null,
     sobrenome varchar(30) not null,
