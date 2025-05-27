@@ -9,7 +9,7 @@ create table cadastro (
     data_cadastro timestamp default current_timestamp
 );
 
-INSERT INTO aluno (nome, sobrenome, idade, sexo) VALUES 
+INSERT INTO cadastro (nome, sobrenome, idade, sexo) VALUES 
 ('João', 'Silva', 18, 'Masculino'),
 ('Maria', 'Santos', 19, 'Feminino'),
 ('Pedro', 'Oliveira', 20, 'Masculino'),

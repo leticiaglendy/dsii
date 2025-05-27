@@ -18,7 +18,7 @@ try:
         sexo = input("Digite o Sexo (Masculino/Feminino): ").upper()
 
         try:
-            cursor.execute("INSERT INTO Aluno (Nome, Sobrenome, Idade, Sexo) VALUES (%s, %s, %s, %s)", (nome, sobrenome, idade, sexo))
+            cursor.execute("INSERT INTO Cadastro (Nome, Sobrenome, Idade, Sexo) VALUES (%s, %s, %s, %s)", (nome, sobrenome, idade, sexo))
             conexao.commit()
             print("Dados inseridos com sucesso!")
 
@@ -31,14 +31,14 @@ try:
             break
 
 
-    cursor.execute("SELECT * FROM Aluno")
+    cursor.execute("SELECT * FROM Cadastro")
     registros = cursor.fetchall()
 
     for row in registros:
-        print("Nome = ", row[0])
-        print("Sobrenome = ", row[1])
-        print("Idade = ", row[2])
-        print("Sexo  = ", row[3], "\n")
+        print("Nome = ", row[1])
+        print("Sobrenome = ", row[2])
+        print("Idade = ", row[3])
+        print("Sexo  = ", row[4], "\n")
 
 except pymysql.MySQLError as e:
     print(f"Erro de conexão/operação com o banco de dados: {e}")
